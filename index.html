@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="gitViewer">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.0.x" src="https://code.angularjs.org/1.0.8/angular.js" data-semver="1.0.8"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrlDM">
+    <p>Hello {{user.name}} from {{user.location}}!</p>
+    <h1>{{user.name.length}}</h1>
+    <div>
+
+      {{username}}
+      <form name="searchUser">
+        <input type="search" placeholder="Username to find" ng-model="username" />
+        <input type="submit" value="Search" ng-click="search()">
+        
+      </form>
+      
+      <div>User Name: {{user.name}}</div>
+      <div>User Company: {{user.company}}</div>
+
+      <div>
+        <img ng-src="{{user.avatar_url}}" title="{{user.name}}">
+     </div>        
+    </div>
+    
+    <p>{{question}}</p>
+  </body>
+
+</html>
